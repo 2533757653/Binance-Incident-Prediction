@@ -55,6 +55,8 @@ scripts/optimised.bat         # 启动 BTC/ETH 协同优化版观察面板
 ```
 
 > 提示：`.bat` 启动脚本需为 **CRLF** 换行（本仓库 `.gitattributes` 已配置）。关闭窗口即停止。
+>
+> 🔧 双击若报 `No module named 'xxx'`：是当前 Python 没装依赖。用**你实际运行的那个 Python** 执行 `python -m pip install -r requirements.txt`；或把 `scripts/*.bat` 里的 `set "PY=..."` 改成你 Python 的完整路径。
 
 ## 📂 目录
 
