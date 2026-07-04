@@ -6,8 +6,8 @@ foreach ($old in 'Horizon-1-Start.lnk','Horizon-2-Stop.lnk','Horizon-3-Review.ln
 }
 $ws = New-Object -ComObject WScript.Shell
 $lnk = $ws.CreateShortcut((Join-Path $desk 'Horizon-Signal.lnk'))
-$lnk.TargetPath = 'D:\Horizon-Incident\scripts\horizon.bat'
-$lnk.WorkingDirectory = 'D:\Horizon-Incident'
+$lnk.TargetPath = (Join-Path $PSScriptRoot 'horizon.bat')
+$lnk.WorkingDirectory = (Split-Path $PSScriptRoot -Parent)
 $lnk.IconLocation = 'shell32.dll,137'
 $lnk.Description = 'Horizon 事件合约信号：双击开始，关窗即停，内置弹窗+战绩'
 $lnk.Save()
