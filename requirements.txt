@@ -1,0 +1,16 @@
+# Horizon-Incident 运行依赖
+numpy
+pandas
+scikit-learn
+xgboost
+ta                 # 技术指标库（RSI/MACD/布林等）
+httpx              # 行情/情绪数据拉取
+joblib             # 模型加载
+pydantic           # 数据结构校验
+PyYAML             # 读取 config/*.yaml
+rich               # 终端观察面板
+jinja2             # 报告模板
+
+# Windows 桌面弹窗提醒（可选，失败自动降级为控制台）
+win10toast-click; sys_platform == "win32"
+plyer

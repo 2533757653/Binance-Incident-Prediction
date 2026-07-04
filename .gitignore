@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# 数据与回测
+data/cache/
+data/historical/
+*.parquet
+*.feather
+
+# 旧泄露版大模型(已弃用，~70MB，可由旧脚本再生；诚实版 proofs/honest/ 体积小予以保留)
+proofs/iter-15/*.joblib
+
+# 日志
+*.log
+logs/
+
+# 运行时信号日志（实盘/观察产生，持续变动，不入库）
+proofs/honest/*.jsonl
+
+# 环境
+.env
+.env.local
+config/smtp.env
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+
+# 系统
+.DS_Store
+Thumbs.db

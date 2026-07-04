@@ -1,0 +1,15 @@
+# Force CRLF for Windows batch files
+# Without this, Git may check out .bat files with LF line endings,
+# which causes Windows CMD to treat the whole file as one line and
+# fail with errors like "'ident' 不是内部或外部命令".
+*.bat          text eol=crlf
+*.cmd          text eol=crlf
+
+# Shell scripts use LF
+*.sh           text eol=lf
+
+# Python files use LF
+*.py           text eol=lf
+
+# Markdown / docs use LF
+*.md           text eol=lf

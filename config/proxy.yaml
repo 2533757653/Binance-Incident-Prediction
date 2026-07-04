@@ -1,0 +1,20 @@
+# Horizon-Incident 代理配置
+#
+# 优先级（从高到低）：
+#   1) 环境变量 HTTPS_PROXY / HTTP_PROXY / ALL_PROXY
+#   2) 本文件 http / https 字段
+#   3) Windows 系统代理（注册表自动检测，Clash 默认 7897）
+#
+# 一般情况下留空即可——live_signal_v2 启动时会自动从
+# Windows 注册表读系统代理，省得手填端口漂移。
+#
+# 真要手填就解除下面注释（比如你用的是 V2RayN 默认 10809）：
+# http:  "http://127.0.0.1:10809"
+# https: "http://127.0.0.1:10809"
+http:  ""
+https: ""
+socks5: ""
+timeout_sec: 10
+retry:
+  max: 3
+  backoff_sec: [2, 5, 10]

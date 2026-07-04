@@ -1,0 +1,18 @@
+factor_v1:
+  mom_15m:
+    lookback: 15
+    threshold: 0.005
+  bb_1h:
+    period: 20
+    std: 2.0
+    extreme: 0.95
+  atr_4h:
+    period: 14
+    breakout_mult: 1.5
+  scoring:
+    min_confidence: 0.50
+    min_expected_value: 0.0
+    min_payoff_ratio: 0.8
+    max_spread: 0.05
+  signal:
+    ttl_seconds: 60
